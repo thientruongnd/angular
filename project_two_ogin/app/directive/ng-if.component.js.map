@@ -1,0 +1,1 @@
+{"version":3,"file":"ng-if.component.js","sourceRoot":"","sources":["ng-if.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAyB,eAAe,CAAC,CAAA;AAQzC;IAAA;QACC,WAAM,GAAY,KAAK,CAAC;IACzB,CAAC;IARD;QAAC,gBAAS,CAAC;YACV,QAAQ,EAAE,MAAM,CAAC,EAAE;YACnB,QAAQ,EAAE,UAAU;YACpB,WAAW,EAAE,sBAAsB;SACnC,CAAC;;qBAAA;IAIF,oBAAC;AAAD,CAAC,AAFD,IAEC;AAFY,qBAAa,gBAEzB,CAAA"}

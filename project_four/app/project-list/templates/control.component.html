@@ -1,0 +1,16 @@
+<form class="navbar-form navbar-right" role="search">
+    <div class="form-group">
+    	<label>Summary Type: </label>
+        <select #selectSummary (change)="settingSummary(selectSummary.value)" class="form-control">
+            <option *ngFor="let item of valueSummary; let i = index" value="{{ i }}"  [selected]="i == typeSummary" >{{ item }}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+    	<label>Currency: </label>
+        <select #selectCurrency (change)="settingCurrency(selectCurrency.value)" class="form-control">
+            <option *ngFor="let item of valueCurrency;" value="{{ item }}"  [selected]="item == typeCurrency" >{{ item | uppercase }}</option>
+        </select>
+    </div>
+</form>
+<div class="clearfix"></div>

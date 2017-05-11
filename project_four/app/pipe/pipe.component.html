@@ -1,0 +1,85 @@
+<table class="table table-bordered table-striped table-hover">
+	<thead>
+		<tr class="info">
+			<th width="20%">Name</th>
+			<th width="40%">Input</th>
+			<th width="40%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- uppercase -->
+		<tr>
+			<td>uppercase</td>
+			<td>{{ courseObj.name }}</td>
+			<td>{{ courseObj.name | uppercase }}</td>
+		</tr>
+		
+		<!-- lowercase -->
+		<tr>
+			<td>lowercase</td>
+			<td>{{ courseObj.name }}</td>
+			<td>{{ courseObj.name | lowercase }}</td>
+		</tr>
+
+		<!-- slice -->
+		<tr>
+			<td>slice - string</td>
+			<td>{{ courseObj.name }}</td>
+			<td>{{ courseObj.name | slice:2:4 }}</td> 
+		</tr>
+
+		<!-- slice -->
+		<tr>
+			<td>slice - array</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require">{{ course }}</li></ul>
+			</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require | slice:-1">{{ course }}</li></ul>
+			</td> 
+		</tr>
+
+		<!-- decimal -->
+		<tr>
+			<td>decimal</td>
+			<td>{{ courseObj.price }}</td>
+			<td>{{ courseObj.price | number:'3.0-3' }}</td>
+		</tr>
+
+		<!-- percent -->
+		<tr>
+			<td>percent</td>
+			<td>{{ percentB }}</td>
+			<td>{{ percentB | percent:'3.2-3'}}</td>
+		</tr>
+
+		<!-- currency -->
+		<tr>
+			<td>currency</td>
+			<td>{{ courseObj.price }}</td>
+			<td>{{ courseObj.price | currency:'VND':true:'9.0-0' }}</td>
+		</tr>
+
+		<!-- date -->
+		<tr>
+			<td>date</td>
+			<td>{{ courseObj.date }}</td>
+			<td>{{ courseObj.date | date:'dd-MM-y'  }}</td>
+		</tr>
+
+		<!-- json -->
+		<tr>
+			<td>json</td>
+			<td>{{ courseObj }}</td>
+			<td>{{ courseObj | json  }}</td>
+		</tr>
+
+		<!-- Chaining pipes  -->
+		<tr>
+			<td>Chaining pipes </td>
+			<td>{{ courseObj }}</td>
+			<td>{{ courseObj | json | uppercase | lowercase }}</td>
+		</tr>
+		
+	</tbody>
+</table>

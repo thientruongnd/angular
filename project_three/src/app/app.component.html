@@ -1,0 +1,29 @@
+<h3>Angular 2 - Project 03 : Setting Color Ngon xuan truong</h3>
+<!-- Setting Color -->
+<div class="row">
+	<!-- Appcontroller -->
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{componentTitle}}</h3>
+			</div>
+			<div class="panel-body">
+				<p [ngStyle]="{'color':resertColor}"> {{componentTitle}}</p>
+				<button (click) = "control.changeColor('#000804')" type="button" class="btn btn-primary">Reset</button>
+			</div>
+		</div>
+	</div>
+	<!-- ControlComponent -->
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<zvn-control 
+		#control
+		[mcolor] = "resertColor"
+		(selectColor) = "changeColor($event)"></zvn-control>
+	</div>
+	<!-- ReviewComponent -->
+	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<zvn-previewer [color] = "resertColor">
+			
+		</zvn-previewer>
+	</div>
+</div>

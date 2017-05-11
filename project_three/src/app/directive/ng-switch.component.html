@@ -1,0 +1,20 @@
+<h3 >ngSwitch</h3>
+<!-- <span [ngSwitch]="toeChoice">
+	<div *ngSwitchCase="'Eenie'">Eenie</div>
+	<div *ngSwitchCase="'Meani'e">Meanie</div>
+	<div *ngSwitchCase="'Miney'">Miney</div>
+	<div *ngSwitchCase="'Moe'">Moe</div>
+	<div *ngSwitchDefault>output</div>
+</span> -->
+
+ <ul class="nav nav-tabs">
+		<li role="presentation" [class.active]="tab=='home'" > <a href="#" (click) = "changeTab('home')">Home</a></li>
+		<li role="presentation" [class.active]="tab=='profile'" > <a href="#" (click) = "changeTab('profile')">Profile</a></li>	
+</ul>
+<div [ngSwitch]="tab">
+	<p *ngSwitchCase="'home'">Home</p>
+	<p *ngSwitchCase="'profile'">Profile
+		<button type="button" class="btn btn-primary">Button </button>
+	</p>
+	<p *ngSwitchDefault>Default</p>
+</div>

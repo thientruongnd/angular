@@ -1,0 +1,3 @@
+https://github.com/settings/profile?profile_link=1
+https://developer.github.com/v3/users/
+Theme: http://bootsnipp.com/snippets/featured/user-profile-thumbnails-bs-3

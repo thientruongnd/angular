@@ -1,0 +1,19 @@
+<h2>Event-binding</h2>
+
+<button (click)="clickMe1()" type="button" class="btn btn-info">Click 1</button>
+
+<button (click)="clickMe2($event)" type="button" class="btn btn-info">Click 2</button>
+
+<div>
+	<button (click)="btnClick($event)" type="button" class="btn btn-success">Button 3</button>
+</div>
+<h3>Tag</h3>
+<input type="text" name="tag" class="form-control" (keyup)="onKeyUP($event)">
+<p id="result-tag" style="margin-top: 20px">
+	<span class="label label-info">Label</span>
+	<span class="label label-info">Label</span>
+	<span class="label label-info">Label</span>
+	<span class="label label-info">Label</span>
+	<span class="label label-info">Label</span>
+
+</p>

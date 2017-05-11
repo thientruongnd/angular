@@ -1,0 +1,9 @@
+<h2>Two way binding + {{firstName}}</h2>
+
+<!-- <input [(ngModel)]="firstName"> -->
+
+<h3 style="color: red">Two way binding + {{firstName}}</h3>
+
+
+<input [value]="firstName"  (input)="firstName=$event.target.value" >
+

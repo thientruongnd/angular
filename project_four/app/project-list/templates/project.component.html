@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+	
+	<!-- CONTROL -->
+	<div class="panel-heading">
+		<zvn-control
+			[typeSummary]="typeSummary"
+			[typeCurrency]="typeCurrency"
+			(typeSummaryChange)="changeSummary($event)"
+			(typeCurrencyChange)="changeCurrency($event)"
+			>
+		</zvn-control>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<template ngFor let-course [ngForOf]="courses">
+				<zvn-course 
+					[typeSummary]="typeSummary"
+					[typeCurrency]="typeCurrency"
+					[course]="course" 
+				></zvn-course>
+			</template>
+		</div>
+	</div>
+</div>

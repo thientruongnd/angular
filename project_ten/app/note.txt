@@ -1,0 +1,58 @@
+FORM
+	Type 					Code			Module
+	Template Driven			HTML			FormModule
+	Data (Model)Driven		TypeScript		ReactiveFormsModule
+
+[(ngModel)]
+
+State						Class if true	Class if false
+Control has been visited	ng-touched		ng-untouched
+Control's value has changed	ng-dirty		ng-pristine
+Control's value is valid	ng-valid		ng-invalid
+
+	Validate
+
+
+EXERCISE
+	INPUT		TYPE 		Validate			DataSource
+	username	text		NotEmpty			NO
+							Length: 5-10
+							Regex:	a-z
+	email		email		NotEmpty			NO
+							Regex:	a-z
+	gender		radio		NotEmpty			StringArray
+	social_web	text
+	social_face	text
+	country					NotEmpty			StringArray		
+
+
+
+<FORM #formProfile="ngForm" (ngSubmit)="onSubmit(formProfile.value)> 	NgForm
+	<ELEMENT 															FormControl
+		#element
+		[(ngModel)]="xxx"
+		name="username" 
+	>
+	</ELEMENT>
+	
+	<div [hidden]="element.valid || element.pristine"
+            
+    </div>
+    <div *ngIf="email.dirty && email?.errors?.pattern">
+		 email invalid
+	</div>
+</FORM>
+
+<input 
+								
+
+email: "abc@gmail.com"
+facebook:"Facebook 123"
+username:"abc"
+website:"Website"
+
+email: "",
+username: "",
+social: 
+  facebook: "",
+  website: ""

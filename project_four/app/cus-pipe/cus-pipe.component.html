@@ -1,0 +1,78 @@
+<table class="table table-bordered table-striped table-hover">
+	<thead>
+		<tr class="info">
+			<th width="20%">Name</th>
+			<th width="40%">Input</th>
+			<th width="40%">Output</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<!-- capitalize -->
+		<tr>
+			<td>capitalize</td>
+			<td>{{ text }}</td>
+			<td>{{ text | capitalize }}</td>
+		</tr>
+		
+		<!-- array - even -->
+		<tr>
+			<td>array - even</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber">{{ num }}</li></ul>
+			</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber | array">{{ num }}</li></ul>
+			</td>
+		</tr>
+
+		<!-- array - odd -->
+		<tr>
+			<td>array - odd</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber">{{ num }}</li></ul>
+			</td>
+			<td>
+				<ul><li *ngFor="let num of arrNumber | array:'odd'">{{ num }}</li></ul>
+			</td>
+		</tr>
+
+		<!-- sort - ASC -->
+		<tr>
+			<td>sort - asc</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require">{{ course }}</li></ul>
+	  		</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require | sort">{{ course }}</li></ul>
+			</td>
+		</tr>
+
+		<!-- sort - DESC -->
+		<tr>
+			<td>sort - desc</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require">{{ course }}</li></ul>
+	  		</td>
+			<td>
+				<ul><li *ngFor="let course of courseObj.require | sort:'DESC' ">{{ course }}</li></ul>
+			</td>
+		</tr>
+		
+		<!-- summary -->
+		<tr>
+			<td>summary</td>
+			<td>{{ description }}</td>
+			<td>{{ description | summary:30:'.........'}}
+			</td>
+		</tr>
+
+		<!-- Categoty -->
+		 <tr>
+			<td>Categoty</td>
+			<td><ul><li *ngFor="let category of arrCategory">{{ category }}</li></ul></td>
+			<td>{{ arrCategory | sort:'DESC' | category | uppercase }}</td>
+		</tr>
+
+	</tbody>
+</table>
